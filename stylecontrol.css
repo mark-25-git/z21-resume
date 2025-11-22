@@ -1,0 +1,476 @@
+@media (max-width: 480px) {
+    /* header {
+        font-size: 20px !important;
+        position: relative !important;
+    }
+
+    .nav-link{
+        font-size: 12px;
+        position: relative;
+        top: 6vh;        
+        left: -21vw;
+    }
+    #search{
+        display: none;
+    }
+    .material-symbols-outlined{
+        position: relative;
+        bottom: 1vh;
+        
+    }
+    #booksContainer a {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
+    }
+
+    .books a {
+        width: 200px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-right: 20px;
+        flex-shrink: 0;
+    } */
+
+    /* .books img {
+        max-width: 100%;
+    }
+
+    .bookDesc {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .bookContainer_page3 {
+        width: 100%;
+    }
+
+    .bookcover_page3 img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+        width: 80vw;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        line-height: 0;
+    }
+
+    .bookTitle_page3,
+    .bookAuthor_page3,
+    .rating_page3,
+    .bookDesc_page3,
+    div {
+        text-align: center;
+    }
+
+    .bookTitle_page3 {
+        font-size: 24px;
+    }
+
+    .bookAuthor_page3 {
+        font-size: 18px;
+    }
+
+    .rating_page3 {
+        font-size: 16px;
+    }
+
+    .bookDesc_page3 {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }    */
+    .bookCovers_categories{
+        margin-bottom: 20px;  
+        width: 50%;
+    }
+    #Literature_and_Fiction img, #Non-Fiction img{
+        width: 100%;
+    }
+        
+    
+    
+}
+
+/* Styles for the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;  /* Width of the scrollbar */
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Color of the track */
+}
+
+/* Handle (or the thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #c1bfbf;  /* Color of the scrollbar handle */
+    border-radius: 5px;  /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3d3c3c;  /* Color of the scrollbar handle when hovered over */
+}
+
+.books img:hover, .bookCovers_categories img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.books, .bookCovers_categories {
+    overflow: visible;
+}
+
+
+
+.navbar-brand{
+    font-family: Lisu Bosa ;
+    font-weight: bold;    
+    font-size: 35px;
+}
+#readinglist_icon, #account_list{
+    margin-right: 2vw;
+}
+
+/* header{
+    display: flex;
+    font-family: Lisu Bosa ;
+    font-weight: bold;    
+    font-size: 25px;
+    margin: 0px;   
+    height: 80px;
+    width: 100%;
+    line-height: 10px;
+    position: fixed;
+    background-color: rgb(255,255,255,0.7);
+    
+}
+
+header #bookstore{
+    font-size: 50px;
+}
+header #bookstore:hover{
+    text-decoration: none;
+}
+header h1{
+    margin-left: 15px;
+}
+header .material-symbols-outlined{
+    position: absolute;
+    line-height: 78px;
+}
+header #account{
+    right: 2vw;
+}
+header #cart{
+    right: 5vw;
+}
+header #search{
+    position: absolute;
+    top: 3px;
+    right: 45vw;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+#searchInput{
+    position: absolute;
+    right: 650px;
+    top: 31px;
+}
+header a{    
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+} */
+footer a{
+    font-size: 16px;
+    color: rgb(0,0,0,0.8);
+    text-decoration: none;
+}
+/* header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+header ul{
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 30px;
+}
+header li{
+    display: inline;
+    margin-right: 4vw;
+} */
+/* hr{
+    color: gray;
+    opacity: 40%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}    
+#menuIcon{
+    vertical-align: middle;
+    margin-left: 15px;
+    font-size: 25px;
+}
+#menuIcon:hover{
+    cursor: pointer;
+    font-weight: bolder;
+}
+#menuText{
+    font-family: Oxygen;
+    vertical-align: middle;
+    font-size: 17px;
+    margin-top: 0;
+    
+}
+#menuText:hover{
+    cursor: pointer;
+    text-decoration: underline;
+} */
+#gototop{
+    display: none;
+    position: fixed;    
+    bottom: 10vh;
+    right: 5vh;
+}
+.gradientBackg{
+    display: inline-block;
+    background: linear-gradient(to bottom, white, rgb(224, 224, 224));
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    padding-left: 15px;    
+    padding-right: 15px; 
+    width: 100%;            
+}
+h2{
+    font-family: Lisu Bosa ;
+    font-weight: bold;
+}
+#booksContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.books {
+    width: 400px; 
+    box-sizing: border-box; 
+    padding: 10px; 
+}
+.books a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.books img {     
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);                
+    padding: 0; 
+    margin: 0;   
+}
+.bookCovers_categories {
+    display: inline-block; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);                
+    padding: 0; 
+    margin-right: 30px; 
+    line-height: 0;     
+}
+.bookNo{
+    margin-left: 25px;
+    font-family: Source Serif 4;
+    font-size: 50px;
+}
+.bookDesc{
+    margin-left: 25px;
+    font-family: Calibri;
+    padding-right: 10px;
+    margin-right: 25px;
+}
+/* .bookContainer_page3{
+    width: 50vw;
+}
+.bookcover_page3{
+    position: absolute;
+    top: 120px;
+    left: 25px;
+    display: inline-block; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);  
+    line-height: 0;
+}
+.bookTitle_page3{
+    position: absolute;
+    top:120px ;
+    left: 280px;
+    font-size: 40px;
+}
+.bookAuthor_page3{
+    position: absolute;
+    top: 180px;
+    left: 283px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.rating_page3{
+    position: absolute;
+    top: 280px;
+    left: 283px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 14px;
+}
+.rating_page3 .reviews_page3{
+    font-size: 14px;
+    color: gray;
+}
+.bookDesc_page3{
+    position: absolute;
+    top: 340px;
+    left: 283px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#read_button_page3 {
+    position: absolute;
+    top: 410px;
+    left: 283px;
+    height: 42px;
+    width: 250px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 0;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#want_button_page3{
+    position: absolute;
+    top: 410px;
+    left: 550px;
+    height: 42px;
+    width: 170px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+} */
+.bookcontainer_bookdetails{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bookcover_bookdetails{
+    margin-right: 20px;
+}
+.booktitle_bookdetails{
+    font-size: 30px;
+}
+.rating_bookdetails{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.reviews_bookdetails{
+    font-size: 12px;
+    color: gray;
+}
+.bookDesc_bookdetails{
+    margin-top: 20px;
+}
+.btngroup_bookdetails{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn{
+    width: 170px;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 20px;
+}
+footer{
+    height: 150px;
+    background-color: rgb(224, 224, 224);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column {
+    flex-basis: 25%;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-column p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.footer-column i {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: #0cb929;  /* You can choose any color */
+}
+
+.faq-container {
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;  /* Space between FAQ items */
+}
+
+.faq-item {
+    flex: 1;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
