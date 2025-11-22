@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tan Jun Jie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --bg-white: #ffffff;
+            --bg-light: #f5f5f7;
+            --accent: #0071e3;
+            --accent-hover: #0077ed;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        nav .contact {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+        }
+
+        nav .contact a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav .contact a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 40px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero .tagline {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .description {
+            font-size: 21px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--text-primary);
+            color: var(--bg-white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s;
+            letter-spacing: -0.2px;
+        }
+
+        .cta-button:hover {
+            background: #4a4a4f;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        /* Why OrionMano */
+        .why-section {
+            background: var(--bg-light);
+            border-radius: 30px;
+            margin: 60px auto;
+            padding: 80px 60px;
+        }
+
+        .why-content {
+            font-size: 24px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .why-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .skill-card {
+            padding: 40px 30px;
+            background: var(--bg-light);
+            border-radius: 20px;
+            transition: box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .skill-card p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .experience-title {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .experience-company {
+            font-size: 20px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .experience-date {
+            font-size: 17px;
+            color: var(--text-secondary);
+        }
+
+        .experience-achievements {
+            margin-top: 25px;
+        }
+
+        .achievement {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .achievement::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .achievement strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            padding: 40px;
+            background: var(--bg-light);
+            border-radius: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .project-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 17px;
+            transition: opacity 0.3s;
+        }
+
+        .project-card a:hover {
+            opacity: 0.7;
+        }
+
+        /* Education Section */
+        .education-item {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .education-degree {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .education-school {
+            font-size: 22px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .coursework {
+            margin-top: 40px;
+        }
+
+        .coursework h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .coursework-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .coursework-item {
+            padding: 10px 20px;
+            background: var(--bg-light);
+            border-radius: 20px;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .fyp {
+            margin-top: 50px;
+            padding: 40px;
+            background: var(--bg-light);
+            border-radius: 20px;
+        }
+
+        .fyp h4 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .fyp p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .fyp strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .fyp-poster {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-light);
+            border-radius: 30px;
+            margin: 100px auto;
+            padding: 80px 60px;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .cta-section h2 {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+        }
+
+        .cta-section p {
+            font-size: 24px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            padding: 14px 32px;
+            background: transparent;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s;
+            letter-spacing: -0.2px;
+            border: 2px solid var(--text-primary);
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--text-primary);
+            color: var(--bg-white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-light);
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        footer .contact-info {
+            font-size: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer .contact-info a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+        }
+
+        footer .contact-info a:hover {
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .container {
+                padding: 0 20px;
+            }
+
+            nav .contact {
+                gap: 15px;
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero .tagline {
+                font-size: 22px;
+            }
+
+            .hero .description {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .why-section {
+                padding: 50px 30px;
+            }
+
+            .why-content {
+                font-size: 20px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 50px 30px;
+                margin: 60px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 36px;
+            }
+
+            .cta-section p {
+                font-size: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button,
+            .cta-button-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Tan Jun Jie</div>
+            <div class="contact">
+                <a href="mailto:tanjj80@gmail.com">tanjj80@gmail.com</a>
+                <a href="https://wa.me/60123107525" target="_blank">+6012 310 7525</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hey, I'm Jun Jie</h1>
+            <p class="tagline">Fresh grad who loves building things that actually matter</p>
+            <p class="description">
+                I love building websites, crafting frontend experiences, and designing UI/UX that actually works. 
+                I also get excited about making systems flow better and automating the boring stuff. 
+                Whether it's creating something beautiful or making things more efficient, I'm all in. 
+                And yes, I'm not afraid to use AI to learn faster and work smarter.
+            </p>
+            <a href="#why" class="cta-button">Why I think we'd work well together</a>
+        </div>
+    </section>
+
+    <!-- Why OrionMano Section -->
+    <section id="why" class="why-section">
+        <div class="why-content">
+            I read that <strong>OrionMano helps businesses get found online</strong> and honestly, that's exactly the 
+            kind of work I want to do. Not the corporate-speak kind, but the real kind where you actually help people 
+            grow their business. I love building websites, crafting frontend experiences, and designing UI/UX that 
+            people actually enjoy using. I've also built systems that save time and genuinely enjoy figuring out how 
+            to make workflows smoother. In a small team like yours, I know I can jump in and contribute right away. 
+            Plus, I'm the type who gets curious about problems and doesn't give up easily. And yeah, I'm pretty good 
+            at using modern tools (including AI) to get things done faster.
+            <br><br>
+            One thing I'm particularly good at? Being the bridge between business and tech. My lecturer once explained 
+            it perfectly: business owners don't know about technical stuff, tech people don't know about business. 
+            That's where I come in. I'm good at collecting business requirements and turning them into actual systems 
+            that work. It's what my degree trained me for, and it's something I genuinely enjoy doing.
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">What I Can Do</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Building Stuff</h3>
+                <p>Next.js, JavaScript, Python, PHP, HTML, CSS, SQL, Flutter, Solidity</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data & Platforms</h3>
+                <p>Supabase (PostgreSQL), MySQL, Firebase, Google Sheets, WooCommerce</p>
+            </div>
+            <div class="skill-card">
+                <h3>Making Life Easier</h3>
+                <p>Git/GitHub, Google Apps Script, AppSheet, and yes, AI tools too</p>
+            </div>
+            <div class="skill-card">
+                <h3>Making It Look Good</h3>
+                <p>UX principles, Photoshop, Illustrator, XD, Canva</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience">
+        <h2 class="section-title">Where I've Been</h2>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">IT Intern</div>
+                    <div class="experience-company">Biofact Life Sdn. Bhd.</div>
+                </div>
+                <div class="experience-date">Jan 2024 - May 2024</div>
+            </div>
+            <div class="experience-achievements">
+                <div class="achievement">
+                    <strong>Built a meeting room booking system</strong> because everyone was fighting over rooms. 
+                    Used Google Apps Script to make it work, and suddenly scheduling became way less chaotic.
+                </div>
+                <div class="achievement">
+                    <strong>Created an inventory system</strong> that actually made sense. Used AppSheet to track 
+                    raw materials, and for the first time, people could actually see what they had in stock.
+                </div>
+                <div class="achievement">
+                    <strong>Designed a logo</strong> for a new product line. They needed something, I had Illustrator 
+                    open, and it turned out pretty good. Sometimes you just figure it out as you go.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Things I've Built</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Perabot Megah</h3>
+                <p>An e-commerce site I built with WooCommerce. Real site, real products, real customers.</p>
+                <a href="https://www.perabotmegah.my" target="_blank">www.perabotmegah.my →</a>
+            </div>
+            <div class="project-card">
+                <h3>Teevent</h3>
+                <p>A simple landing page I made. Sometimes simple is exactly what you need.</p>
+                <a href="https://www.teevent.my" target="_blank">www.teevent.my →</a>
+            </div>
+            <div class="project-card">
+                <h3>Orange Books</h3>
+                <p>A bookstore landing page I worked on for a group project. Can't believe I actually made this on my own before ChatGPT was a thing. The struggle was real.</p>
+                <a href="bookstore (1).html" target="_blank">View Assignment →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">School Stuff</h2>
+        <div class="education-item">
+            <div class="education-degree">Bachelor of Information Systems (Honours)</div>
+            <div class="education-school">Business Information Systems<br>Universiti Tunku Abdul Rahman, Kampar, Perak</div>
+            
+            <div class="coursework">
+                <h4>Classes I Actually Liked</h4>
+                <div class="coursework-list">
+                    <span class="coursework-item">Database Development</span>
+                    <span class="coursework-item">Software Engineering</span>
+                    <span class="coursework-item">UX Design</span>
+                    <span class="coursework-item">Front End Development</span>
+                    <span class="coursework-item">Systems Analysis & Design</span>
+                    <span class="coursework-item">Business Analytics</span>
+                    <span class="coursework-item">Social Media Strategies</span>
+                </div>
+            </div>
+
+            <div class="fyp">
+                <h4>Final Year Project - Got an A (4.0)</h4>
+                <p>
+                    Built a <strong>blockchain e-commerce app</strong> using Flutter and Solidity. The whole point 
+                    was to cut out middlemen and make transactions cheaper. It was challenging, but I learned a ton 
+                    and it actually worked. Pretty proud of this one.
+                </p>
+                <img src="FYP2 Poster.png" alt="Final Year Project Poster" class="fyp-poster">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Let's Talk</h2>
+        <p>
+            If you think I might be a good fit for OrionMano, I'd love to chat. 
+            I'm genuinely excited about what your team has been doing, and I'm ready to jump in and contribute.
+        </p>
+        <div class="cta-buttons">
+            <a href="mailto:tanjj80@gmail.com" class="cta-button">Send an Email</a>
+            <a href="https://wa.me/60123107525" class="cta-button-secondary" target="_blank">WhatsApp Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <a href="mailto:tanjj80@gmail.com">tanjj80@gmail.com</a>
+            <a href="https://wa.me/60123107525" target="_blank">+6012 310 7525</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div, .skill-card, .project-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
